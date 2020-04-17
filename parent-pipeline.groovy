@@ -8,9 +8,8 @@ pipeline {
                 echo getEnvironment('dev').toString()
                 echo 'CALLING SUB PIPELINE'
                 script{
-                    .getRawBuild().getLog()
-                buildResult = build job: 'Child Job'
-                print buildResult.getRawBuild().getLog()
+                    buildResult = build job: 'Child Job'
+                    print buildResult.getRawBuild().getLog()
                 }
                 echo 'SUB PIPELINE FINISHED'
             }
