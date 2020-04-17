@@ -1,4 +1,4 @@
-def call(String name)
+def call(String name){
         environments = [
                 dev: [
                         beanstalkEnv: 'DEVELOPMENT',
