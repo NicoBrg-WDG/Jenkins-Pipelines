@@ -1,4 +1,4 @@
-class Constants {
+class constants {
         environments = [
         dev: [
                 beanstalkEnv: 'DEVELOPMENT',
