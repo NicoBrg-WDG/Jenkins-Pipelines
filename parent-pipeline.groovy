@@ -8,9 +8,9 @@ pipeline {
                 echo getEnvironment('dev').toString()
                 echo 'CALLING SUB PIPELINE'
                 script{
-                some_var = build job: 'Child Job'
-                log = Jenkins.getInstance().getItemByFullName('Child Job').getBuildByNumber(some_var.getNumber()).logFile.text
-                print log
+                    .getRawBuild().getLog()
+                buildResult = build job: 'Child Job'
+                print buildResult.getRawBuild().getLog()
                 }
                 echo 'SUB PIPELINE FINISHED'
             }
