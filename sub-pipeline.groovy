@@ -1,5 +1,3 @@
-@Library('environments') _
-
 pipeline {
    agent any
    stages {
@@ -14,7 +12,7 @@ pipeline {
             stage('sub pipeline stage 2') {
                agent any
                steps{
-                 echo environments.getEnvironments().get('dev').beanstalkEnv
+                 echo constants.getEnvironments().get('dev').beanstalkEnv
                }
             }
          }
