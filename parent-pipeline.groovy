@@ -1,4 +1,4 @@
-@Library('Constants')_
+@Library('Constants@master')_
 pipeline {
     agent { label 'master' }
     stages {
