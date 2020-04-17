@@ -6,13 +6,13 @@ pipeline {
             stage('sub pipeline stage 1') {
                agent any
                steps{
-                  echo 'sub pipeline stage 1 executed'
+                 echo getEnvironment('prod').toString()
                }
             }
             stage('sub pipeline stage 2') {
                agent any
                steps{
-                 echo constants.getEnvironments().get('dev').beanstalkEnv
+                 echo getEnvironment('dev-staging').beanstalkEnv
                }
             }
          }
