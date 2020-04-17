@@ -7,10 +7,7 @@ pipeline {
                 echo 'PARENT PIPELINE RUNNING'
                 echo getEnvironment('dev').toString()
                 echo 'CALLING SUB PIPELINE'
-                script{
-                    buildResult = build job: 'Child Job'
-                    print buildResult.getRawBuild().getLog()
-                }
+                buildAndPrint('Child Job')
                 echo 'SUB PIPELINE FINISHED'
             }
         }
