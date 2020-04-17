@@ -12,19 +12,7 @@ pipeline {
             stage('sub pipeline stage 2') {
                agent any
                steps{
-                 echo 'sub pipeline stage 2 executed'
-               }
-            }
-            stage('sub pipeline stage 3') {
-               agent any
-               steps{
-                  echo 'sub pipeline stage 3 executed'
-               }
-            }
-            stage('sub pipeline stage 4') {
-               agent any
-               steps{
-                  echo 'sub pipeline stage 4 executed'
+                 echo environments.getEnvironments().get('dev').beanstalkEnv
                }
             }
          }
