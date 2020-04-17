@@ -1,3 +1,4 @@
+@Library('constants')_
 pipeline {
     agent { label 'master' }
     stages {
