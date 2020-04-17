@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'RUNNING'
                 echo 'LOADING SUB PIPELINE'
-                load 'sub-pipeline.groovy'
+                build job: 'Child Job'
             }
         }
     }
