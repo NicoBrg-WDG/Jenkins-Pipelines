@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'PARENT PIPELINE RUNNING'
-                echo getEnvironment('dev')
+                echo getEnvironment('dev').toString()
                 //echo 'CALLING SUB PIPELINE'
                 //build job: 'Child Job'
                 //echo 'SUB PIPELINE FINISHED'
