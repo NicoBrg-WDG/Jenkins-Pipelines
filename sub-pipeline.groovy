@@ -13,7 +13,7 @@ pipeline {
             stage('sub pipeline stage 2') {
                agent any
                steps{
-                 echo getEnvironment('dev-staging').beanstalkEnv
+                 echo getEnvironment('devstaging').beanstalkEnv
                }
             }
          }
