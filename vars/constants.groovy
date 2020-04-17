@@ -1,7 +1,5 @@
-test = 'plop'
-
-def getEnvironments() {
-return [
+class Constants {
+        environments = [
         dev: [
                 beanstalkEnv: 'DEVELOPMENT',
                 frontConfig: 'dev'
@@ -18,4 +16,8 @@ return [
                 beanstalkEnv: 'PRODUCTION',
                 frontConfig: 'prod'
         ]
-]
+}
+
+def getEnvironment(name) {
+        return environments.get(name)
+}
