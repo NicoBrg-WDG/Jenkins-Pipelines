@@ -4,9 +4,10 @@ pipeline {
         stage('build') {
             steps {
                 echo 'PARENT PIPELINE RUNNING'
-                echo 'CALLING SUB PIPELINE'
-                build job: 'Child Job'
-                echo 'SUB PIPELINE FINISHED'
+                echo Constants.environments.get('dev')
+                //echo 'CALLING SUB PIPELINE'
+                //build job: 'Child Job'
+                //echo 'SUB PIPELINE FINISHED'
             }
         }
     }
