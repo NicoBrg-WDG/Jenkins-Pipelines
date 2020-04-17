@@ -6,9 +6,9 @@ pipeline {
             steps {
                 echo 'PARENT PIPELINE RUNNING'
                 echo getEnvironment('dev').toString()
-                //echo 'CALLING SUB PIPELINE'
-                //build job: 'Child Job'
-                //echo 'SUB PIPELINE FINISHED'
+                echo 'CALLING SUB PIPELINE'
+                build job: 'Child Job'
+                echo 'SUB PIPELINE FINISHED'
             }
         }
     }
