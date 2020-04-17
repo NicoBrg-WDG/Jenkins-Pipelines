@@ -1,11 +1,11 @@
-@Library('Constants@master')_
+@Library('mylib@master')_
 pipeline {
     agent { label 'master' }
     stages {
         stage('build') {
             steps {
                 echo 'PARENT PIPELINE RUNNING'
-                echo Constants.environments.get('dev')
+                echo getEnvironment('dev')
                 //echo 'CALLING SUB PIPELINE'
                 //build job: 'Child Job'
                 //echo 'SUB PIPELINE FINISHED'
