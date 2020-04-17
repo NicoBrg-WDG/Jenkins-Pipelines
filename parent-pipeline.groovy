@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'RUNNING'
-                echo 'LOADING SUB PIPELINE'
+                echo 'PARENT PIPELINE RUNNING'
+                echo 'CALLING SUB PIPELINE'
                 build job: 'Child Job'
+                echo 'SUB PIPELINE FINISHED'
             }
         }
     }
